@@ -1,0 +1,43 @@
+文章地址：https://my.oschina.net/feichexia/blog/196575
+
+JVM性能调优监控工具jps、jstack、jmap、jhat、jstat、hprof
+现实企业级Java开发中，有时候我们会碰到下面这些问题：
+1）OutOfMemoryError，内存不足
+2）内存泄露
+3）线程死锁
+4）锁争用（Lock Contention）
+5）Java进程消耗CPU过高
+1. jps
+jps(Java Virtual Machine Process Status Tool)是JDK1.5提供的一个显示当前所有java进程pid的命令，适合在linux/unix平台上简单察看当前
+java进程
+
+使用方法：在当前命令行下打jps(jps存放在JAVA_HOME/bin/jps，使用时为了方便请将JAVA_HOME/bin/加入到Path) 。
+命令格式：jps [options ] [ hostid ]
+       [options]选项 ：
+-q：仅输出VM标识符，不包括classname,jar name,arguments in main method
+-m：输出main method的参数
+-l：输出完全的包名，应用主类名，jar的完全路径名
+-v：输出jvm参数
+-V：输出通过flag文件传递到JVM中的参数(.hotspotrc文件或-XX:Flags=所指定的文件
+-Joption：传递参数到vm,例如:-J-Xms512m
+        [hostid]：
+[protocol:][[//]hostname][:port][/servername]
+命令的输出格式 ：
+  lvmid [ [ classname| JARfilename | "Unknown"] [ arg* ] [ jvmarg* ] ]
+
+2. jstack
+jstack主要用来查看某个Java进程内的线程堆栈信息，语法格式如下：
+jstack [option] pid
+jstack [option] executable core
+jstack [option] [server-id@]remote-hostname-or-ip
+
+3.  jmap（Memory Map）和jhat（Java Heap Analysis Tool）
+
+jmap用来查看堆内存使用状况，一般结合jhat使用。
+
+4. jstat（JVM统计监测工具）
+jstat [ generalOption | outputOptions vmid [interval[s|ms] [count]] ]
+ vmid是Java虚拟机ID，在Linux/Unix系统上一般就是进程ID。interval是采样时间间隔。count是采样数目
+
+5. hprof（Heap/CPU Profiling Tool）
+hprof能够展现CPU使用率，统计堆内存使用情况。

@@ -1,0 +1,48 @@
+﻿JSP、Servlet学习心得, 叶雄 2012-12-12
+1. request: 
+  1.1 用于客户端请求服务端Servlet容器的servlet对象，传输参数(parameter name and values)、属性、输入流(input stream)
+  1.2 HttpServletRequestWrapper是HttpSerlvetRequest接口一个包装(wrapper)实现 ,该类实现了装饰模式。
+ 
+2. response：
+  2.1 协助服务端Servlet容器响应客户端的Servlet对象。
+  2.2 HttpServletResponseWrapper是HttpServletResponse接口的一个包装(wrapper)实现 ,该类实现了装饰模式。
+
+3. HttpSession:
+  3.1 HttpSession实现供User通过HTTP协议请求(多个)或访问Web应用程序的会话，并通过会话(session）对象来存储相关的用户信
+      息。
+  3.2 Servlet容器通过HttpSession创建基于HTTP客户端和HTTP服务端的会话(session),通常一个User创建一个会话。服务器可通过
+      cookies或rewriting URLs等方法来维护(维持)session。
+  3.3 A servlet should be able to handle cases in which the client does not choose to join a session, such as when 
+      cookies are intentionally turned off. Until the client joins the session, isNew returns true. If the client 
+      chooses not to join the session, getSession will return a different session on each request, and isNew will 
+      always return true. 
+
+  3.4 Session information is scoped only to the current web application (ServletContext), so information stored in one 
+      context will not be directly visible in another. (分布式的Session如何处理？)
+ 
+      
+4. ServletConfig：用于Servlet容器初始化期间传输参数和信息的配置对象
+
+5. ServletContext: 
+  5.1 应用程序级别(web application)。定义了一系列的方法与Servlet容器通信，例如获取MIME类型的文件，分发request请求，写日
+  		志文件。
+  5.2 一个JAVA Virtual Machine只用一个web application context。
+  5.2 当WEB应用采用分布式部署时，每个虚拟机都有一个(有且只有一个)  ServletContext Instance，这种应用情景下ServletContext
+      不能全局共享，因为ServletContext的信息不是全局的。此时只能使用外部资源来代替，比如数据库。
+
+6. ServletContextListener：
+  6.1 当Web Application Context发生变化(WEB服务器启动时),实现此接口的Listener会接收到通知。接口的实现类(Listener)必须配置
+  		在Web应用程序的描叙文件中(web.xml)。
+  6.2 <listener>
+				<listener-class>com.system.XxxxListener</listener-class>
+			</listener>
+7. Servlet:
+  7.1 Servlet是一种运行在Web服务器内的JAVA小程序。Servlets通常通过HTTP协议接收、响应来自Web客户端的请求。
+  7.2 Servlet生命周期：
+    A. The servlet is constructed, then initialized with the init method. 
+    B. Any calls from clients to the service method are handled. 
+    C. The servlet is taken out of service, then destroyed with the destroy method, then garbage collected and finalized. 
+    
+8. PageContext:
+      
+deployment descriptor for the web application：web.xml
