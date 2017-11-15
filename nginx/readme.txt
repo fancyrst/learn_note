@@ -1,3 +1,3 @@
-1. Nginx入门指南，快速搭建静态文件服务器和代理服务器
+1. Nginx鍏ラ棬鎸囧崡锛屽揩閫熸惌寤洪潤鎬佹枃浠舵湇鍔″櫒鍜屼唬鐞嗘湇鍔″櫒
 http://blog.csdn.net/zxh2075/article/details/52667905
 http://blog.lifw.org/post/91978153
