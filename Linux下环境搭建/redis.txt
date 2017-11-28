@@ -1,0 +1,17 @@
+1. redis安装
+参考redis中文网站介绍：http://www.redis.cn/download.html
+
+交互教程：http://try.redis.io/
+
+二进制文件是编译完成后在src目录下，通过下面的命令启动Redis服务：$ src/redis-server
+
+使用内置的客户端命令redis-cli进行使用：
+$ src/redis-cli
+redis> set foo bar
+OK
+redis> get foo
+"bar"
+
+1.1 redis教程
+基础教程：http://www.runoob.com/redis/redis-transactions.html
+redis优化：http://blog.csdn.net/u011204847/article/details/51302109

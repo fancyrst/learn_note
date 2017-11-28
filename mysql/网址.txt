@@ -1,0 +1,9 @@
+1. canal阿里巴巴开源项目: 基于mysql数据库binlog的增量订阅&消费
+
+http://agapple.iteye.com/blog/1796633
+
+2. 阿里开源项目
+https://github.com/alibaba/canal
+
+3. 使用canal进行mysql数据同步到Redis
+http://blog.csdn.net/tb3039450/article/details/53928351

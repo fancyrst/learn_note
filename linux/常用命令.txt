@@ -112,8 +112,13 @@ rz/sz 通过Zmodem协议传输数据。
 
 8. tar
 
-9. 查看、编辑、保存文件
+9. curl 文件下载
+curl是一个和服务器交互信息（发送和获取信息）的命令行工具，支持DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP,
+IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET和TFTP等协议。curl支持代理、
+用户认证、FTP上传、HTTP POST请求、SSL连接、cookies、文件传输、Metalink等功能。
 
+https://www.cnblogs.com/coderland/p/5883763.html
+https://www.cnblogs.com/gbyukg/p/3326825.html
 
 
 
