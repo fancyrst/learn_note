@@ -1,4 +1,5 @@
 1.Java分布式应用如何入门以及有哪些资料？
 介绍java应用架构的变迁：https://www.zhihu.com/question/22764869
 
-2.
+2. Java 9 新特性——模块化
+https://www.cnblogs.com/xiongxx/p/6734416.html
