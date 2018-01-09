@@ -2,4 +2,12 @@
 http://ms.csdn.net/geek/200613
 
 2. 知乎 - 如何学习Spring boot？
-https://www.zhihu.com/question/53729800
+https://www.zhihu.com/question/53729800http://ms.csdn.net/geek/200613
+
+2. Spring官方教程翻译
+http://doc.spring4all.com/spring-guildes/
+
+3.Spring For All 垂直技术社区（spring4all.com），国内首个 Spring 及 Spring Cloud 构建微服务架构的交流社区。
+更好地为大家提供 Spring 技术内容分享，大家可以到这里获得更多关于 Spring Cloud 以及其他丰富技术内容，
+更有程序猿DD、周立、程超、小马哥、泥瓦匠BYSocket等知名博主、开源爱好者为您答疑解惑。
+http://www.spring4all.com/
