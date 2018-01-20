@@ -3,9 +3,18 @@
 
 交互教程：http://try.redis.io/
 
-二进制文件是编译完成后在src目录下，通过下面的命令启动Redis服务：$ src/redis-server
+安装
+下载，解压，编译:
 
-使用内置的客户端命令redis-cli进行使用：
+$ wget http://download.redis.io/releases/redis-4.0.6.tar.gz
+$ tar xzf redis-4.0.6.tar.gz
+$ cd redis-4.0.6
+$ make
+二进制文件是编译完成后在src目录下，通过下面的命令启动Redis服务：
+
+$ src/redis-server
+你可以使用内置的客户端命令redis-cli进行使用：
+
 $ src/redis-cli
 redis> set foo bar
 OK
